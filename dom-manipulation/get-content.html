@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+    $(document).ready(function(){
+ 
+        $("#text").click(function(){
+            alert($("p").html())
+        })
+        $("#html").click(function(){
+            alert($("p").text())
+        })
+    })
+</script>
+</head>
+<body>
+  <p>hello this is paragrph <br>the quick brown fox jumps over the lazy dog </p>  
+  <button id="text">Get text </button>
+  <button id="html">html</button>
+</body>
+</html>
