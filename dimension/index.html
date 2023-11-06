@@ -6,12 +6,22 @@
     <title>Document</title>
     <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
     <script>
-        $(document).ready(function(){
-            
+    $(document).ready(function(){
+ 
+        $("#html").click(function(){
+            $(".col").css("height","700px")
+            $(".col").css("width","70px")
+            $(".col").css("background-color","red")
         })
-    </script>
+    })
+</script>
 </head>
 <body>
-    
+  <p>hello this is paragrph <br>the quick brown fox jumps over the lazy dog </p>
+  <div class="col">
+    <p>the quick brown fox jumps over the lazy dog</p>
+  </div>  
+  <button id="text">Get text </button>
+  <button id="html">click here to change width </button>
 </body>
 </html>
