@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Functionality</title>
+    <style>
+        /* Add some basic styling */
+        #search-input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        #result-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .result-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input" oninput="search()" />
+
+    <ul id="result-list"></ul>
+
+    <script>
+        // Sample data
+        const data = [
+            'Apple the quick brown fox jumps over the lazy dog',
+            'Banana',
+            'Orange',
+            'Mango',
+            'Pineapple',
+            'Grapes',
+            'Strawberry',
+            'Blueberry'
+        ];
+
+        function search() {
+            // Get the search input value
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+
+            // Filter the data based on the search term
+            const filteredData = data.filter(item => item.toLowerCase().includes(searchTerm));
+
+            // Display the filtered results
+            displayResults(filteredData);
+        }
+
+        function displayResults(results) {
+            const resultList = document.getElementById('result-list');
+
+            // Clear previous results
+            resultList.innerHTML = '';
+
+            // Display the filtered results
+            results.forEach(result => {
+                const listItem = document.createElement('li');
+                listItem.className = 'result-item';
+                listItem.textContent = result;
+                resultList.appendChild(listItem);
+            });
+        }
+
+        // Initial display with all data
+        displayResults(data);
+    </script>
+</body>
+</html>
