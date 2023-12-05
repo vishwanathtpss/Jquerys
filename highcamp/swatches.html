@@ -1,0 +1,57 @@
+blackbox
+<script>
+    $(document).ready(function() {
+        $('div').removeDuplicates();
+    });
+    </script>
+    $('div').removeDuplicates();
+    $('.color-swatches').each(function(i, v){ 
+        var className = '.'+$(this).attr('class').split(' ').join('.');
+        $(className + ":not(:first)").remove(); 
+    });
+
+    color-swatches
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+$.fn.removeDuplicates = function () {
+    var seen = {};
+    return this.filter(function () {
+        var id = $(this).text(); 
+        return seen.hasOwnProperty(id) ? false : (seen[id] = true);
+    });
+};
+$('div').removeDuplicates();
+$('.blackbox').each(function (i, v) {
+    var className = '.' + $(this).attr('class').split(' ').join('.');
+    $(className + ":not(:first)").removeDuplicates(); 
+});
+
+$('.blackbox.className').filter(function() {
+    return this.textContent === 'content';
+}).slice(0, -1).remove();
+
+
+var $div = $('div.blackbox.className:contains(content)');
+
+if ($div.length > 1) {
+   $div.not(':last').remove()
+}
+
+
+var $div = $('div.blackbox.className:contains(content)');
+if ($div.length > 1) {
+   $div.not(':last').remove()
+}
+alert($div.length)
+
+
+var $div = $('div.color-swatches.className:contains(content)');
+if ($div.length > 1) {
+   $div.not(':last').remove()
+}
+alert($div.length)
+
+
+$('.color-swatches').each(function(i, v){ 
+    var className = '.'+$(this).attr('class').split(' ').join('.');
+    $(className + ":not(:first)").remove(); 
+});

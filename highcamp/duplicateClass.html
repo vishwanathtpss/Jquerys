@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".color-swatches").each(function () {
+          var allInnerDivs = $(this).find("div");
+          var uniqueClasses = {};
+          allInnerDivs.each(function () {
+            var classes = $(this).attr("class").split(" ");
+            classes.forEach(function (className) {
+              uniqueClasses[className] = uniqueClasses[className] || [];
+              uniqueClasses[className].push(this);
+            }, this);
+          });
+          for (var className in uniqueClasses) {
+            if (uniqueClasses.hasOwnProperty(className)) {
+              if (uniqueClasses[className].length > 1) {
+                $(uniqueClasses[className].slice(1)).remove();
+              }
+            }
+          }
+        });
+      });
+    </script>
+
+    <div class="color-swatches">
+      <div class="blackbox">black</div>
+
+      <div class="blackbox">black</div>
+      <div class="blackbox">black</div>
+      <div class="blackbox">black</div>
+
+      <div class="whitebox">white</div>
+
+      <div class="whitebox">white</div>
+
+      <div class="silverbox">silver</div>
+
+      <div class="silverbox">silver</div>
+    </div>
+  </body>
+</html>
