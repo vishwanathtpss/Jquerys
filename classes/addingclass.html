@@ -25,3 +25,120 @@
     </div>
 </body>
 </html>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+   $(document).ready(function(){
+   
+    $(".frmTitle").css("display","none")
+    })
+    $(document).ready(function() {
+      
+    setTimeout(function() {
+    $("em").css("display","none")
+    }, 2000); // 2000 milliseconds (2 seconds) delay
+});
+</script>
+<script>
+// Get the iframe by its ID
+function myFunction() {
+  
+    var iframe = document.getElementById('iframeID'); // replace 'iframeID' with the actual ID of your iframe
+iframe.style.display = 'none';
+
+// Get the h2 element by its class name
+var h2Element = document.querySelector('.frmTitle');
+
+// Hide the h2 element
+h2Element.style.display = 'none';
+    
+  }
+var iframe = document.getElementById('iframeID'); // replace 'iframeID' with the actual ID of your iframe
+iframe.style.display = 'none';
+
+// Get the h2 element by its class name
+var h2Element = document.querySelector('.frmTitle');
+
+// Hide the h2 element
+h2Element.style.display = 'none';
+
+$(document).ready(function() {
+        // Use setTimeout to delay the execution
+        setTimeout(function() {
+            var iframe = $('#myId'); 
+            iframe.hide();
+            var h2Element = $('.frmTitle');
+            h2Element.hide();
+        }, 2000);
+    });
+    var h2 = $(".customss");
+
+// Check if any element with the class "customss" was found
+if (h2Element.length > 0) {
+    // Access the first element in the collection and hide it
+    h2Element.eq(0).hide();
+} else {
+    console.log("No element with the class 'customss' found");
+}
+</script>
+<script>
+   $(document).ready(function(){
+     setTimeout(function() {
+            var iframe = $('#myId'); 
+          
+            var h2Element = $('.frmTitle');
+            if (h2Element.length > 0) {
+    // Access the first element in the collection and hide it
+    h2Element.eq(0).hide();
+            }
+ else {
+    console.log("No element with the class 'customss' found");
+ }
+        }, 6000);
+    });
+
+
+
+   $(document).ready(function(){
+    h2Element=$(".frmTitle").addClass("testss")
+     setTimeout(function() { 
+            if (h2Element.length > 0) {
+    $(".testss").css("display","none");
+            }
+ else {
+    console.log(h2Element);
+ }
+        }, 6000);
+    });
+
+
+    $(document).ready(function(){
+    $(".frmTitle").addClass("testsssss")
+    $(".testsssss").css("display","none");
+     setTimeout(function() { 
+            if (testss.length > 0) {
+    $(".testss").css("display","none");
+            }
+ else {
+    console.log(h2Element);
+ }
+        }, 6000);
+    });
+
+
+    $(document).ready(function(){
+    $(".frmTitle").addClass("testss")
+     setTimeout(function() { 
+            if (testss.length > 0) {
+    $(".testss").css("display","none");
+            }
+ else {
+    console.log(h2Element);
+ }
+        }, 6000);
+    });
+</script>
+<iframe frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.eu/arno/form/ContactFormDealersSiteIT/formperma/Gqh-mGXtDx1lF3evwKp3p5ishm7ykgZeeA2207dkDm8'</iframe>>
+    $(document).ready(function(){
+        $('.demos').contents().find('.frmTitle').hide();
+       
+    });

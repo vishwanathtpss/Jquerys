@@ -1,0 +1,70 @@
+<script>
+    function redirectToCart() {
+     var shopUrl = "https://highcampsupply.com/a/gs/cart/";
+     
+     // Check if the checkbox is checked
+     if (document.getElementById("cartCheckbox").checked) {
+       // Redirect to the specified URL
+       window.location.href = shopUrl;
+     }
+   }
+   document.addEventListener('DOMContentLoaded', function () {
+     function isIE() {
+       const ua = window.navigator.userAgent;
+       const msie = ua.indexOf('MSIE ');
+       const trident = ua.indexOf('Trident/');
+ 
+       return msie > 0 || trident > 0;
+     }
+ 
+     if (!isIE()) return;
+     const cartSubmitInput = document.createElement('input');
+     cartSubmitInput.setAttribute('name', 'checkout');
+     cartSubmitInput.setAttribute('type', 'hidden');
+     document.querySelector('#cart').appendChild(cartSubmitInput);
+     document.querySelector('#checkout').addEventListener('click', function (event) {
+       document.querySelector('#cart').submit();
+     });
+   });
+   // Set the display property of the element to none using CS
+});
+ </script>
+ $(document).ready(function(){
+  $('.frmTitle').contents().find('#leftpanel').hide();
+  $('').contents().find('#toppanel').hide();
+});
+<iframe frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.eu/arno/form/ContactFormDealersSiteIT/formperma/Gqh-mGXtDx1lF3evwKp3p5ishm7ykgZeeA2207dkDm8' onload="myFunction()"></iframe>>
+<script>
+  function myFunction() {
+    var h2 = document.getElementsByClassName(".customss");
+   var em = h2.className = "customss";
+  em.style.display = 'none';
+  document.getElementsByClassName(".frmTitle").classList.add('MyClass');
+
+    
+  }
+  </script>
+ var iframe = document.getElementById('myIframe');
+ var h4 = iframe.contentDocument.querySelector('h4');
+ h4.style.display = 'none';
+  
+ var element = document.getElementById("myDIV");
+ element.classList.add("mystyle");
+
+ var h2 = document.getElementsByClassName(".customss");
+h2.style.display = 'none';
+
+
+var h2 = document.getElementsByClassName(".customss");
+
+// Check if any element with the class "customss" was found
+if (h2.length > 0) {
+    // Access the first element in the collection
+    h2[0].style.display = 'none';
+} else {
+    console.log("No element with the class 'customss' found");
+}
+
+
+   var h2 = documentdocument.getElementById("IdElement").classList.add("ClassNameAdd");
+   
